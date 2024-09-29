@@ -1,11 +1,18 @@
 CC = cc
 FLAGS = -Wall -Wextra -Werror
 
-SRC = main.c parse_map.c
+SRC = main.c parse_map.c $(VALIDATE_MAP) $(VISUAL)
 
 LIBFT_DIR = libft
 LIBFT = $(LIBFT_DIR)/libft.a
-GET_NEXT_LINE = get_next_line/get_next_line.c get_next_line/get_next_line_utils.c
+GET_NEXT_LINE = get_next_line/get_next_line.c
+VALIDATE_MAP = validate_map/validate_map.c \
+validate_map/validate_border.c \
+validate_map/validate_chars.c \
+validate_map/validate_path.c \
+validate_map/validate_rect.c
+
+VISUAL = visual/init_game.c
 
 OBJ = $(SRC:.c=.o) $(GET_NEXT_LINE:.c=.o)
 
@@ -14,7 +21,7 @@ NAME = so_long
 all: LIBFTMAKE $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(FLAGS) -o $(NAME) $(OBJ) -L$(LIBFT_DIR) -lft 
+	$(CC) $(FLAGS) -o $(NAME) $(OBJ) -L$(LIBFT_DIR) -Lminilibx-linux -lft -lmlx -lXext -lX11
 
 LIBFTMAKE:
 	make -C $(LIBFT_DIR)
