@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 11:30:02 by rdavurov          #+#    #+#             */
-/*   Updated: 2024/10/03 09:59:43 by codespace        ###   ########.fr       */
+/*   Updated: 2024/10/06 18:57:44 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ typedef struct s_game
 {
 	char	**map;
 	void	*mlx;
+	void	*win;
 	void	*window;
 	t_txt	textures;
 }			t_game;
