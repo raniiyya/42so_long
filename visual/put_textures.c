@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 20:20:19 by rdavurov          #+#    #+#             */
-/*   Updated: 2024/10/06 18:57:18 by codespace        ###   ########.fr       */
+/*   Updated: 2024/10/06 18:59:57 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,10 @@ void    put_textures(t_game game, char key)
                 put_texture(game, game.textures.c, j * 50, i * 50);
             if (game.map[i][j] == 'P')
                 put_texture(game, key, j * 50, i * 50);
+            if (game.map[i][j] == 'M')
+                put_texture(game, game.textures.m, j * 50, i * 50);
+            if (game.map[i][j] == 'E')
+                put_texture(game, game.textures.e, j * 50, i * 50);
         }
     }
 }
