@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 11:30:02 by rdavurov          #+#    #+#             */
-/*   Updated: 2024/10/06 18:57:44 by codespace        ###   ########.fr       */
+/*   Updated: 2024/10/09 19:01:40 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ typedef struct s_txt
 
 typedef struct s_game
 {
+	int		player_x;
+	int		player_y;
 	char	**map;
 	void	*mlx;
 	void	*win;
@@ -41,11 +43,18 @@ typedef struct s_game
 }			t_game;
 
 char		**parse_map(char **map, char *file);
-void		validate_map(char **map);
+void		validate_map(t_game *game);
 void		validate_chars(char **map);
 void		validate_rect(char **map);
-void		validate_path(char **map);
+void		validate_path(t_game *game);
 void		validate_border(char **map);
 void		init_game(t_game *game);
+void		put_textures(t_game *game, char key);
+void		player_up(t_game *game);
+void		player_down(t_game *game);
+void		player_left(t_game *game);
+void		player_right(t_game *game);
+int			map_height(char **map);
+int			map_width(char **map);
 
 #endif
