@@ -12,7 +12,11 @@ validate_map/validate_chars.c \
 validate_map/validate_path.c \
 validate_map/validate_rect.c
 
-VISUAL = visual/init_game.c
+VISUAL = visual/init_game.c \
+visual/fill_textures.c \
+visual/map_height.c \
+visual/map_width.c \
+visual/actions.c
 
 OBJ = $(SRC:.c=.o) $(GET_NEXT_LINE:.c=.o)
 
