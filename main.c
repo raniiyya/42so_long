@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 13:37:34 by rdavurov          #+#    #+#             */
-/*   Updated: 2024/10/09 19:05:02 by codespace        ###   ########.fr       */
+/*   Updated: 2024/10/12 21:12:50 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int main(int argc, char **argv)
     }
     game.map = parse_map(game.map, argv[1]);
     validate_map(&game);
+    find_e(&game);
     init_game(&game);
     return (0);
 }
