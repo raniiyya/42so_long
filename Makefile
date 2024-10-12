@@ -1,7 +1,7 @@
 CC = cc
 FLAGS = -Wall -Wextra -Werror
 
-SRC = main.c parse_map.c $(VALIDATE_MAP) $(VISUAL)
+SRC = main.c parse_map.c utils.c $(VALIDATE_MAP) $(VISUAL)
 
 LIBFT_DIR = libft
 LIBFT = $(LIBFT_DIR)/libft.a
