@@ -6,11 +6,31 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 19:29:58 by rdavurov          #+#    #+#             */
-/*   Updated: 2024/10/09 19:01:03 by codespace        ###   ########.fr       */
+/*   Updated: 2024/10/12 21:09:43 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
+
+static bool	check_money(t_game *game)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (game->map[i])
+	{
+		j = 0;
+		while (game->map[i][j])
+		{
+			if (game->map[i][j] == 'C')
+				return true;
+			j++;
+		}
+		i++;
+	}
+	return false;
+}
 
 void	player_up(t_game *game)
 {

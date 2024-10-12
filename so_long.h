@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 11:30:02 by rdavurov          #+#    #+#             */
-/*   Updated: 2024/10/12 21:07:07 by codespace        ###   ########.fr       */
+/*   Updated: 2024/10/12 21:10:15 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include "get_next_line/get_next_line.h"
 # include "libft/libft.h"
 # include "minilibx-linux/mlx.h"
+# include <stdbool.h>
 # include <fcntl.h>
 
 typedef struct s_txt
