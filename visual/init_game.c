@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 19:45:31 by rdavurov          #+#    #+#             */
-/*   Updated: 2024/10/09 19:04:19 by codespace        ###   ########.fr       */
+/*   Updated: 2024/10/12 21:07:49 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ void	init_game(t_game *game)
 	fill_textures(game);
 	put_textures(game, 'w');
 	mlx_hook(game->window, 17, 0, close_game, game);
+	mlx_hook(game->window, 2, 1L<<0, handle_key_events, game);
 	mlx_key_hook(game->window, handle_key_events, game);
 	mlx_loop(game->mlx);
 }
