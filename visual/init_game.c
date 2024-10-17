@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 19:45:31 by rdavurov          #+#    #+#             */
-/*   Updated: 2024/10/17 17:11:25 by codespace        ###   ########.fr       */
+/*   Updated: 2024/10/17 21:03:45 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,8 @@ int	close_game(t_game *game)
 
 int	handle_key_events(int keycode, t_game *game)
 {
+	char	*tmp; // ADDED
+
 	if (keycode == 119)
 		player_up(game);
 	if (keycode == 115)
@@ -87,6 +89,10 @@ int	handle_key_events(int keycode, t_game *game)
 		player_left(game);
 	if (keycode == 65307)
 		close_game(game);
+	tmp = ft_itoa(game->moves); // ADDED
+	ft_putstr_fd(tmp, 1); // ADDED
+	ft_putstr_fd("\n", 1); // ADDED
+	free(tmp); // ADDED
 	return (42);
 }
 
@@ -95,6 +101,7 @@ void	init_game(t_game *game)
 	game->mlx = mlx_init();
 	game->window = mlx_new_window(game->mlx, map_width(game->map) * 50,
 			map_height(game->map) * 50, "so_long");
+	game->moves = 0; // ADDED
 	fill_textures(game);
 	put_textures(game, 'w');
 	mlx_hook(game->window, 17, 0, close_game, game);

@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 19:29:58 by rdavurov          #+#    #+#             */
-/*   Updated: 2024/10/17 17:09:43 by codespace        ###   ########.fr       */
+/*   Updated: 2024/10/17 21:04:08 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ void	player_up(t_game *game)
 	game->player_y -= 1;
 	game->map[game->player_y][game->player_x] = 'P';
 	put_textures(game, 'w');
+	game->moves++; // ADDED
 }
 
 void	player_down(t_game *game)
@@ -64,6 +65,7 @@ void	player_down(t_game *game)
 	game->player_y += 1;
 	game->map[game->player_y][game->player_x] = 'P';
 	put_textures(game, 's');
+	game->moves++; // ADDED
 }
 
 void	player_left(t_game *game)
@@ -81,6 +83,7 @@ void	player_left(t_game *game)
 	game->player_x -= 1;
 	game->map[game->player_y][game->player_x] = 'P';
 	put_textures(game, 'a');
+	game->moves++; // ADDED
 }
 
 void	player_right(t_game *game)
@@ -98,4 +101,5 @@ void	player_right(t_game *game)
 	game->player_x += 1;
 	game->map[game->player_y][game->player_x] = 'P';
 	put_textures(game, 'd');
+	game->moves++; // ADDED
 }
