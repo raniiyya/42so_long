@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 14:44:22 by rdavurov          #+#    #+#             */
-/*   Updated: 2024/10/09 19:06:31 by codespace        ###   ########.fr       */
+/*   Updated: 2024/10/17 17:08:56 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,9 @@ static char	**map_copy(char **map)
 
 static void	flood_fill(char **map, int x, int y)
 {
-	if (map[y][x] == '1' || map[y][x] == 'r')
+	if (map[y][x] == '1' || map[y][x] == 'v' || map[y][x] == 'M')
 		return ;
-	map[y][x] = 'r';
+	map[y][x] = 'v';
 	flood_fill(map, x, y - 1);
 	flood_fill(map, x - 1, y);
 	flood_fill(map, x, y + 1);
@@ -82,7 +82,7 @@ void	find_player(t_game *game, int *x, int *y)
 			{
 				game->player_y = *y;
 				game->player_x = *x;
-				return;
+				return ;
 			}
 			(*x)++;
 		}
