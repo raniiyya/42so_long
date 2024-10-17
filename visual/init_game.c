@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 19:45:31 by rdavurov          #+#    #+#             */
-/*   Updated: 2024/10/12 21:07:49 by codespace        ###   ########.fr       */
+/*   Updated: 2024/10/17 17:11:25 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,40 @@ void	fill_textures(t_game *game)
 			"./textures/monster.xpm", &height, &height);
 }
 
+void free_textures(t_game *game)
+{
+	mlx_destroy_image(game->mlx, game->textures.b);
+	mlx_destroy_image(game->mlx, game->textures.c);
+	mlx_destroy_image(game->mlx, game->textures.e);
+	mlx_destroy_image(game->mlx, game->textures.w);
+	mlx_destroy_image(game->mlx, game->textures.pd);
+	mlx_destroy_image(game->mlx, game->textures.pl);
+	mlx_destroy_image(game->mlx, game->textures.pu);
+	mlx_destroy_image(game->mlx, game->textures.pr);
+	mlx_destroy_image(game->mlx, game->textures.m);
+}
+
+void	free_map(t_game *game)
+{
+	int	i;
+
+	i = 0;
+	while (game->map[i])
+	{
+		free(game->map[i]);
+		i++;
+	}
+	free(game->map);
+}
+
 int	close_game(t_game *game)
 {
 	(void)game;
+	free_textures(game);
+	free_map(game);
+	mlx_destroy_display(game->mlx);
+	mlx_destroy_window(game->mlx, game->window);
+	free(game->mlx);
 	exit(0);
 	return (42);
 }
@@ -67,7 +98,6 @@ void	init_game(t_game *game)
 	fill_textures(game);
 	put_textures(game, 'w');
 	mlx_hook(game->window, 17, 0, close_game, game);
-	mlx_hook(game->window, 2, 1L<<0, handle_key_events, game);
-	mlx_key_hook(game->window, handle_key_events, game);
+	mlx_hook(game->window, 2, 1L << 0, handle_key_events, game);
 	mlx_loop(game->mlx);
 }
