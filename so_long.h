@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 11:30:02 by rdavurov          #+#    #+#             */
-/*   Updated: 2024/10/12 21:10:15 by codespace        ###   ########.fr       */
+/*   Updated: 2024/10/17 17:13:47 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,9 @@ void		player_up(t_game *game);
 void		player_down(t_game *game);
 void		player_left(t_game *game);
 void		player_right(t_game *game);
+void		find_e(t_game *game);
 int			map_height(char **map);
 int			map_width(char **map);
+int			close_game(t_game *game);
 
 #endif
