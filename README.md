@@ -1,6 +1,7 @@
 # so_long
 
 **so_long** is a 2D game project developed as part of the 42 curriculum. Inspired by classic arcade games, it challenges players to navigate a maze, collect items, and overcome obstacles.
+
 ---
 
 ## Features
