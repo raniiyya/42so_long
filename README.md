@@ -36,6 +36,13 @@
    ```bash
    git clone https://github.com/raniiyya/42so_long.git
    cd 42so_long
+2. Compile the program
+   ```bash
+   make
+3. Run the game with the map file
+   ```bash
+   ./so_long maps/example_map.ber
+
 
 
 ![so_long](https://github.com/user-attachments/assets/30d6542b-f68c-47b0-a2ea-9646f982e09a)
