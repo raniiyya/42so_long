@@ -43,6 +43,12 @@
    ```bash
    ./so_long maps/example_map.ber
 
+### Controls
+
+- **W**: Move up  
+- **A**: Move left  
+- **S**: Move down  
+- **D**: Move right  
 
 
 ![so_long](https://github.com/user-attachments/assets/30d6542b-f68c-47b0-a2ea-9646f982e09a)
