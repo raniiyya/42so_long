@@ -65,5 +65,26 @@ The player wins by collecting all coins and successfully reaching the exit (E).
 #### 4. Custom Maps
 Users can create their own .ber files. See the Map Format for details.
 
+---
+
+## Map Format
+
+Maps are `.ber` files and must follow these rules:
+
+- **`1`**: Wall  
+- **`0`**: Empty space  
+- **`P`**: Player start position (1 required)  
+- **`C`**: Collectibles (At least 1 required)  
+- **`E`**: Exit (1 required)  
+- **`M`**: Monster (Optional, adds difficulty)  
+
+### Example Map:
+
+```bash
+11111
+1P0C1
+1M0E1
+11111
+
 
 ![so_long](https://github.com/user-attachments/assets/30d6542b-f68c-47b0-a2ea-9646f982e09a)
