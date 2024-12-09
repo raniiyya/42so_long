@@ -1,6 +1,6 @@
 # so_long
 
-**so_long** is a simple 2D game developed as part of the 42 curriculum. It challenges players to navigate through a maze-like map, collect all items, and reach the exit. 
+**so_long** is a 2D game project developed as part of the 42 curriculum. Inspired by classic arcade games, it challenges players to navigate a maze, collect items, and overcome obstacles. The game showcases skills in C programming, graphics rendering with the MiniLibX library, and object-oriented design principles.
 
 ---
 
