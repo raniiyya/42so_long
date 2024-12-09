@@ -43,12 +43,27 @@
    ```bash
    ./so_long maps/example_map.ber
 
-### Controls
+---
+
+## Controls
 
 - **W**: Move up  
 - **A**: Move left  
 - **S**: Move down  
-- **D**: Move right  
+- **D**: Move right
+
+---
+
+## Gameplay Mechanics
+
+1. Collect All Coins
+The player must collect all coins (C) before the exit (E) becomes accessible.
+2. Avoid Monsters
+The map may include monsters (M). Stepping on a tile occupied by a monster results in a loss.
+3. Win Condition
+The player wins by collecting all coins and successfully reaching the exit (E).
+4. Custom Maps
+Users can create their own .ber files. See the Map Format for details.
 
 
 ![so_long](https://github.com/user-attachments/assets/30d6542b-f68c-47b0-a2ea-9646f982e09a)
