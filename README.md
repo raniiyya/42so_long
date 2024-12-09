@@ -56,13 +56,13 @@
 
 ## Gameplay Mechanics
 
-1. Collect All Coins
+1. **Collect All Coins**
 The player must collect all coins (C) before the exit (E) becomes accessible.
-2. Avoid Monsters
+2. **Avoid Monsters**
 The map may include monsters (M). Stepping on a tile occupied by a monster results in a loss.
-3. Win Condition
+3. **Win Condition**
 The player wins by collecting all coins and successfully reaching the exit (E).
-4. Custom Maps
+4. **Custom Maps**
 Users can create their own .ber files. See the Map Format for details.
 
 
