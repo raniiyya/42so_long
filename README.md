@@ -85,6 +85,19 @@ Maps are `.ber` files and must follow these rules:
 1P0C1
 1M0E1
 11111
+```
+
+### Map Requirements:
+- Maps must be rectangular.  
+- Surrounded by walls (`1`) on all sides.  
+- At least one player start (`P`), one collectible (`C`), and one exit (`E`).  
+- No gaps or irregular shapes.  
+
+---
+
+## License
+
+This project is for educational purposes under the 42 Network. Redistribution is prohibited without prior authorization.
 
 
 ![so_long](https://github.com/user-attachments/assets/30d6542b-f68c-47b0-a2ea-9646f982e09a)
