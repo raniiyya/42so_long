@@ -56,8 +56,8 @@
 
 ## Gameplay Mechanics
 
-1. **Collect All Coins**
-- The player must collect all coins (C) before the exit (E) becomes accessible.
+### 1. Collect All Coins
+The player must collect all coins (C) before the exit (E) becomes accessible.
 2. **Avoid Monsters**
 - The map may include monsters (M). Stepping on a tile occupied by a monster results in a loss.
 3. **Win Condition**
