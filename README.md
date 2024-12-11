@@ -2,6 +2,8 @@
 
 **so_long** is a 2D game project developed as part of the 42 curriculum. Inspired by classic arcade games, it challenges players to navigate a maze, collect items, and overcome obstacles.
 
+![so_long](https://github.com/user-attachments/assets/30d6542b-f68c-47b0-a2ea-9646f982e09a)
+
 ---
 
 ## Features
@@ -98,6 +100,3 @@ Maps are `.ber` files and must follow these rules:
 ## License
 
 This project is for educational purposes under the 42 Network. Redistribution is prohibited without prior authorization.
-
-
-![so_long](https://github.com/user-attachments/assets/30d6542b-f68c-47b0-a2ea-9646f982e09a)
